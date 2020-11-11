@@ -1,7 +1,15 @@
 import React, { useEffect } from "react";
+import HomeBanner from "../components/HomeBanner";
+import Offers from "../components/Offers";
 
 const Home = () => {
-  return <p>homepage</p>;
+  return (
+    <>
+      <HomeBanner />
+
+      <Offers />
+    </>
+  );
 };
 
 export default Home;
