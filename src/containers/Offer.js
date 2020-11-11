@@ -3,7 +3,8 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const Offer = () => {
-  const { id } = useParams();
+  const id = useParams();
+  console.log(id);
   const [isLoading, setIsLoading] = useState(true);
   const [offer, setOffer] = useState({});
 
