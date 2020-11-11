@@ -1,0 +1,27 @@
+#content .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.offer-card {
+  width: 235px;
+  padding: 0 6px 16px;
+  cursor: pointer;
+}
+
+.offer-card .owner {
+  display: flex;
+  align-items: center;
+}
+
+.offer-card .owner img {
+  height: 35px;
+  border-radius: 50%;
+}
+
+.offer-card .offer-image {
+  width: 100%;
+  object-fit: cover;
+}

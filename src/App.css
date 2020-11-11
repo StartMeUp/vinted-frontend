@@ -1,4 +1,9 @@
 /* Other rules */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 #banner {
   height: 45vh /*65vh*/;
   background-image: url("./assets/images/vinted-home-banner.jpg");
