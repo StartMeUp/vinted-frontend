@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const Offer = () => {
-  const id = useParams();
+  const { id } = useParams();
   console.log(id);
   const [isLoading, setIsLoading] = useState(true);
   const [offer, setOffer] = useState({});
@@ -11,9 +11,9 @@ const Offer = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `https://vinted-back-smu.herokuapp.com/offer/${id}`
-        );
+        const url = `https://vinted-back-smu.herokuapp.com/offer/${id}`;
+        console.log(url);
+        const response = await axios.get(url);
         console.log(response.data);
         setOffer(response.data);
         setIsLoading(false);
