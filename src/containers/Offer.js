@@ -16,12 +16,12 @@ const Offer = () => {
         );
         console.log(response.data);
         setOffer(response.data);
+        setIsLoading(false);
       } catch (error) {
         console.log(error.message);
       }
     };
     fetchData();
-    setIsLoading(false);
   }, [id]);
 
   return isLoading ? (
