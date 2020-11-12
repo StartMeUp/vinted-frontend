@@ -1,0 +1,16 @@
+#nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav img {
+  height: 40px;
+}
+
+#nav .navbutton {
+  border: #00b0b9 solid 1px;
+  border-radius: 8px;
+  padding: 8px 20px;
+}

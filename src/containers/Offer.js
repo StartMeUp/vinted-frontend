@@ -27,23 +27,25 @@ const Offer = () => {
   return isLoading ? (
     <p>Loading</p>
   ) : (
-    <div className="container">
-      {console.log("offer =>", offer, isLoading)}
-      <img src={offer.product_image.secure_url} alt="" />
-      <div className="offer-details">
-        <p>{offer.product_price}</p>
-        <ul>
-          {offer.product_details.map((detail) => {
-            const values = Object.entries(detail);
-            return (
-              <li>
-                {values[0][0]} : {values[0][1]}
-              </li>
-            );
-          })}
-        </ul>
+    <>
+      <div className="container">
+        {console.log("offer =>", offer, isLoading)}
+        <img src={offer.product_image.secure_url} alt="" />
+        <div className="offer-details">
+          <p>{offer.product_price}</p>
+          <ul>
+            {offer.product_details.map((detail) => {
+              const values = Object.entries(detail);
+              return (
+                <li>
+                  {values[0][0]} : {values[0][1]}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
