@@ -1,10 +1,9 @@
 import React from "react";
 import "./index.css";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo-vinted-web.png";
 
 const NavBar = ({ token, setUser }) => {
-  let history = useHistory();
   return (
     <div className="container" id="nav">
       <Link to="/">
@@ -16,7 +15,7 @@ const NavBar = ({ token, setUser }) => {
           className="navbutton"
           onClick={() => {
             setUser(null);
-            history.push("/");
+            window.location.reload();
           }}
         >
           Déconnexion
