@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import Tear from "../../assets/images/tear.svg";
 
 const HomeBanner = () => {
   return (
@@ -10,6 +11,7 @@ const HomeBanner = () => {
           <button>Commencer à vendre</button>
         </div>
       </div>
+      <img src={Tear} alt="" class="tear" />
     </section>
   );
 };

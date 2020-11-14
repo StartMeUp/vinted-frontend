@@ -1,25 +1,48 @@
 #hero {
-  height: 220px;
-  width: 360px;
+  max-height: 220px;
+  height: 100%;
+  max-width: 360px;
   background-color: #fff;
   padding: 25px;
   border-radius: 3px;
   font-size: 34px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  top: 75px;
+  justify-content: space-around;
   box-shadow: 0 0 2px rgba(17, 17, 17, 0.24);
+  color: black;
+}
+
+#banner button {
+  color: white;
+  background-color: #0eadb7;
+  font-size: 20px;
+  font-weight: bold;
+  border: 0;
+  outline: none;
+  border-radius: 3px;
+  padding: 12px 6px;
 }
 
 #banner {
   height: 45vh /*65vh*/;
   background-image: url("../../assets/images/vinted-home-banner.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  position: relative;
 }
 
-#banner img {
-  width: 100%;
+#banner .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   height: 100%;
-  object-fit: cover;
+}
+
+#banner .tear {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 1000px;
 }

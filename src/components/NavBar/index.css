@@ -1,7 +1,6 @@
 #nav {
   height: 60px;
   display: flex;
-  justify-content: ;
   align-items: center;
   padding: 10px 0;
 }
@@ -13,6 +12,7 @@
 
 #nav .navbutton {
   border: #0eadb7 solid 1px;
+  color: #0eadb7;
   border-radius: 8px;
   padding: 8px 20px;
   flex: 1;
@@ -35,17 +35,20 @@
   color: grey;
 }
 .search input {
-  text-indent: 30px;
-  height: 30px;
+  text-indent: 40px;
+  height: 40px;
   width: 100%;
   border-radius: 8px;
   border: 0;
   outline: none;
   background-color: #dddddd;
+  color: grey;
 }
 .search img {
   position: absolute;
-  top: 10px;
-  left: 7px;
+  top: 15px;
+  left: 15px;
   height: 15px;
+  filter: invert(50%) sepia(38%) saturate(20%) hue-rotate(355deg)
+    brightness(93%) contrast(82%);
 }

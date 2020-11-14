@@ -12,7 +12,7 @@ const NavBar = ({ token, setUser }) => {
       </Link>
       <div className="search">
         <img src={Search} alt="" />
-        <input type="text" />
+        <input type="text" placeholder="recherche" />
       </div>
 
       {token ? (

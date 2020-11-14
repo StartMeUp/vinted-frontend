@@ -1,26 +1,37 @@
 #content .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-gap: 15px;
   align-items: stretch;
 }
 
 .offer-card {
-  padding: 0 6px 16px;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .offer-card .owner {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .offer-card .owner img {
-  height: 35px;
+  height: 25px;
   border-radius: 50%;
+  margin-right: 10px;
+}
+
+.offer-card .info {
+  padding: 0 8px;
 }
 
 .offer-card .offer-image {
   width: 100%;
   object-fit: cover;
+}
+
+.offer-card .price {
+  color: black;
+  font-size: 18px;
 }
