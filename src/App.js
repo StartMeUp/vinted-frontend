@@ -26,15 +26,16 @@ function App() {
     <Router>
       <NavBar token={token} setUser={setUser} />
       <Switch>
+        <Route path="/offer/:id">
+          <Offer />
+        </Route>
         <Route path="/login">
           <Login setUser={setUser} />
         </Route>
         <Route path="/signup">
           <Signup setUser={setUser} />
         </Route>
-        <Route path="/offer/:id">
-          <Offer />
-        </Route>
+
         <Route path="/">
           <Home />
         </Route>
