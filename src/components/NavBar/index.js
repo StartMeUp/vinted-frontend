@@ -25,7 +25,7 @@ const NavBar = ({ token, setUser }) => {
           <Link to="/signup" className="navbutton">
             S'inscrire
           </Link>
-          <Link to="login" className="navbutton">
+          <Link to="/login" className="navbutton">
             Se connecter
           </Link>
         </>

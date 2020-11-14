@@ -31,11 +31,11 @@ const Offer = () => {
         <div className="offer-details">
           <p>{offer.product_price}</p>
           <ul>
-            {offer.product_details.map((detail) => {
-              const values = Object.entries(detail);
+            {offer.product_details.map((detail, index) => {
+              const entry = Object.entries(detail).flat();
               return (
-                <li>
-                  {values[0][0]} : {values[0][1]}
+                <li key={index}>
+                  {entry[0]} : {entry[1]}
                 </li>
               );
             })}
