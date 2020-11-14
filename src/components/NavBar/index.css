@@ -1,16 +1,51 @@
 #nav {
   height: 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: ;
   align-items: center;
+  padding: 10px 0;
 }
 
-#nav img {
+#nav #logo {
   height: 40px;
+  flex: 1;
 }
 
 #nav .navbutton {
-  border: #00b0b9 solid 1px;
+  border: #0eadb7 solid 1px;
   border-radius: 8px;
   padding: 8px 20px;
+  flex: 1;
+  text-align: center;
+}
+
+#nav .navbutton:last-child {
+  color: white;
+  background-color: #0eadb7;
+}
+
+#nav .navbutton:not(:last-child) {
+  margin-right: 20px;
+}
+
+.search {
+  position: relative;
+  flex: 3;
+  margin: 0 60px;
+  color: grey;
+}
+.search input {
+  text-indent: 30px;
+  height: 30px;
+  width: 100%;
+  border-radius: 8px;
+  border: 0;
+  outline: none;
+  background-color: #dddddd;
+}
+.search img {
+  position: absolute;
+  top: 10px;
+  left: 7px;
+  height: 15px;
 }

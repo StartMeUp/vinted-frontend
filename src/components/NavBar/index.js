@@ -2,14 +2,19 @@ import React from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo-vinted-web.png";
+import Search from "../../assets/images/search.svg";
 
 const NavBar = ({ token, setUser }) => {
   return (
     <div className="container" id="nav">
       <Link to="/">
-        <img src={Logo} alt="" />
+        <img src={Logo} alt="" id="logo" />
       </Link>
-      <input type="text" />
+      <div className="search">
+        <img src={Search} alt="" />
+        <input type="text" />
+      </div>
+
       {token ? (
         <Link
           className="navbutton"

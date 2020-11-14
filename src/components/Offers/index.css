@@ -1,12 +1,11 @@
 #content .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
 }
 
 .offer-card {
-  width: 235px;
   padding: 0 6px 16px;
   cursor: pointer;
 }
