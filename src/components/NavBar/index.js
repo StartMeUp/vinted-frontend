@@ -31,7 +31,9 @@ const NavBar = ({ token, setUser }) => {
         </>
       )}
 
-      <Link className="navbutton">Vends tes articles</Link>
+      <Link to="/" className="navbutton">
+        Vends tes articles
+      </Link>
     </div>
   );
 };

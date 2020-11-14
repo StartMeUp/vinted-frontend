@@ -30,7 +30,7 @@ const Offers = () => {
       <div className="container">
         {offers.map((offer) => {
           return (
-            <Link to={`offer/${offer._id}`}>
+            <Link key={offer._id} to={`offer/${offer._id}`}>
               <div className="offer-card">
                 <div className="owner">
                   <img src={offer.owner.account.avatar.secure_url} alt="" />
