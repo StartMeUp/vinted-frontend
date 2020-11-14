@@ -23,7 +23,9 @@ const Offer = () => {
   }, [id]);
 
   return isLoading ? (
-    <p>Loading</p>
+    <section className="container loader">
+      <div className="lds-dual-ring"></div>
+    </section>
   ) : (
     <>
       <div className="container">
