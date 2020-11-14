@@ -1,22 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
 const Login = ({ setUser }) => {
   let history = useHistory();
 
+  // States
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  // functions to handle login form
+  const handleEmailChange = (event) => {
+    const value = event.target.value;
+    setEmail(value);
+  };
+
+  const handlePasswordChange = (event) => {
+    const value = event.target.value;
+    setPassword(value);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const response = await axios.post(
-      "https://vinted-back-smu.herokuapp.com/user/login",
-      {
-        email: "brando7@hotmail.com",
-        password: "azerty",
+    try {
+      //brando7@hotmail.com
+      console.log(email);
+      console.log(password);
+      const response = await axios.post(
+        "https://vinted-back-smu.herokuapp.com/user/login",
+        {
+          email,
+          password,
+        }
+      );
+      console.log("response.data =>", response.data);
+      if (response.data.token) {
+        setUser(response.data.token);
+        history.push("/");
+      } else {
+        alert("Erreur, recommencez");
       }
-    );
-    console.log(response.data);
-    setUser(response.data.token);
-    history.push("/");
+    } catch (error) {
+      alert("Erreur, recommencez");
+      console.log(error.message);
+    }
   };
   return (
     <>
@@ -32,7 +59,19 @@ const Login = ({ setUser }) => {
       >
         <h1 style={{ fontSize: 50 }}>Login</h1>
         <form onSubmit={handleSubmit}>
-          <button type="submit">Send login request</button>
+          <input
+            type="email"
+            onChange={handleEmailChange}
+            value={email}
+            placeholder="Email"
+          />
+          <input
+            type="password"
+            onChange={handlePasswordChange}
+            value={password}
+            placeholder="Password"
+          />
+          <button type="submit">Se connecter</button>
         </form>
       </div>
     </>

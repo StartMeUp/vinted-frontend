@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 
 const Offer = () => {
   const { id } = useParams();
-  console.log(id);
   const [isLoading, setIsLoading] = useState(true);
   const [offer, setOffer] = useState({});
 
@@ -12,9 +11,8 @@ const Offer = () => {
     const fetchData = async () => {
       try {
         const url = `https://vinted-back-smu.herokuapp.com/offer/${id}`;
-        console.log(url);
         const response = await axios.get(url);
-        console.log(response.data);
+
         setOffer(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -29,7 +27,6 @@ const Offer = () => {
   ) : (
     <>
       <div className="container">
-        {console.log("offer =>", offer, isLoading)}
         <img src={offer.product_image.secure_url} alt="" />
         <div className="offer-details">
           <p>{offer.product_price}</p>
