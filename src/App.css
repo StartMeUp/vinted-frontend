@@ -59,3 +59,114 @@ section {
     transform: rotate(360deg);
   }
 }
+
+#form {
+  text-align: center;
+  padding-top: 5vh;
+}
+
+#form h1 {
+  font-size: 1.6em;
+}
+
+#form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  margin: 30px auto;
+}
+
+#form form input {
+  height: 30px;
+  border: 0;
+  border-bottom: #fddbde solid 1px;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 6px;
+}
+
+#form form ::placeholder {
+  color: lightgrey;
+  opacity: 1;
+}
+
+#form form button {
+  background-color: #0eadb7;
+  color: white;
+  outline: none;
+  padding: 12px;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 3px;
+}
+
+#offer {
+  background-color: lightgrey;
+  height: calc(100vh - 140px);
+}
+#offer .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#offer .container > img {
+  width: 100%;
+  max-width: 480px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+#offer .offer-details {
+  background-color: white;
+  padding: 40px;
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#offer .offer-price {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+#offer .details-key {
+  width: 60%;
+  display: inline-block;
+}
+
+#offer .details-value {
+  color: black;
+}
+
+#offer .offer-details hr {
+  margin: 20px 0;
+}
+
+#offer .offer-details button {
+  background-color: #0eadb7;
+  width: 100%;
+  outline: none;
+  border: 0;
+  padding: 8px;
+  color: white;
+}
+
+#offer .offer-owner {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#offer .offer-name {
+  color: black;
+  font-weight: bold;
+}
+
+#offer .offer-owner img {
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 50%;
+}

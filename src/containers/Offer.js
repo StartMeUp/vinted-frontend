@@ -27,24 +27,37 @@ const Offer = () => {
       <div className="lds-dual-ring"></div>
     </section>
   ) : (
-    <>
+    <section id="offer">
       <div className="container">
         <img src={offer.product_image.secure_url} alt="" />
         <div className="offer-details">
-          <p>{offer.product_price}</p>
+          <p className="offer-price">{offer.product_price} €</p>
           <ul>
             {offer.product_details.map((detail, index) => {
               const entry = Object.entries(detail).flat();
               return (
                 <li key={index}>
-                  {entry[0]} : {entry[1]}
+                  <span className="details-key">{entry[0]}</span>
+                  <span className="details-value">{entry[1]}</span>
                 </li>
               );
             })}
           </ul>
+          <hr />
+          <p>
+            <span className="offer-name">{offer.product_name}</span>
+            <br />
+            <br />
+            {offer.product_description}
+          </p>
+          <div className="offer-owner">
+            <img src={offer.owner.account.avatar.secure_url} alt="" />
+            {offer.owner.account.username}
+          </div>
+          <button>Acheter</button>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

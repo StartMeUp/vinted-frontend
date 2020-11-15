@@ -46,35 +46,24 @@ const Login = ({ setUser }) => {
     }
   };
   return (
-    <>
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "80vh",
-        }}
-      >
-        <h1 style={{ fontSize: 50 }}>Login</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="email"
-            onChange={handleEmailChange}
-            value={email}
-            placeholder="Email"
-          />
-          <input
-            type="password"
-            onChange={handlePasswordChange}
-            value={password}
-            placeholder="Password"
-          />
-          <button type="submit">Se connecter</button>
-        </form>
-      </div>
-    </>
+    <section className="container" id="form">
+      <h1>Login</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="email"
+          onChange={handleEmailChange}
+          value={email}
+          placeholder="Email"
+        />
+        <input
+          type="password"
+          onChange={handlePasswordChange}
+          value={password}
+          placeholder="Password"
+        />
+        <button type="submit">Se connecter</button>
+      </form>
+    </section>
   );
 };
 
