@@ -172,6 +172,11 @@ section {
 }
 #publish h1 {
   font-size: 1.6em;
+  margin-bottom: 1em;
+}
+
+#publish {
+  background-color: lightgrey;
 }
 
 #publish form {
@@ -179,5 +184,40 @@ section {
 
 #publish .field-container {
   background-color: white;
+  margin-bottom: 20px;
+}
+
+#publish .image-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+#publish label {
+  color: black;
+}
+
+#publish .field-container > div {
+  display: flex;
   padding: 20px;
+  border-bottom: #ebedee solid 1px;
+}
+
+#publish .field-container > div label,
+#publish .field-container > div input,
+#publish .field-container > div textarea {
+  flex: 1;
+}
+
+#publish .field-container > div input,
+#publish .field-container > div textarea {
+  border: 0;
+  border-bottom: 1px solid #ebedee;
+  outline: none;
+  font-size: 16px;
+}
+
+#publish .field-container > div ::placeholder {
+  color: #ccc;
 }

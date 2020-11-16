@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import DummyAvatar from "../assets/images/dummy-avatar.jpg";
 
 const Offer = () => {
   const { id } = useParams();
@@ -51,7 +52,14 @@ const Offer = () => {
             {offer.product_description}
           </p>
           <div className="offer-owner">
-            <img src={offer.owner.account.avatar.secure_url} alt="" />
+            <img
+              src={
+                offer.owner.account.avatar
+                  ? offer.owner.account.avatar.secure_url
+                  : DummyAvatar
+              }
+              alt=""
+            />
             {offer.owner.account.username}
           </div>
           <button>Acheter</button>
