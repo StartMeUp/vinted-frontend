@@ -25,8 +25,9 @@ const Publish = () => {
       // formdata
       const formData = new FormData();
       formData.append("picture", file);
+      formData.append("title", product_name);
       formData.append("description", product_description);
-      formData.append("price", price);
+      formData.append("price", Number(price));
       formData.append("condition", etat);
       formData.append("city", emplacement);
       formData.append("brand", marque);
@@ -41,7 +42,7 @@ const Publish = () => {
       console.log(response);
       history.push(`/offer/${response.data._id}`);
     } catch (error) {
-      console.log(error.message);
+      console.log(error.response);
     }
   };
 
