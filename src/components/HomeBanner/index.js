@@ -11,7 +11,7 @@ const HomeBanner = () => {
           <button>Commencer à vendre</button>
         </div>
       </div>
-      <img src={Tear} alt="" class="tear" />
+      <img src={Tear} alt="" className="tear" />
     </section>
   );
 };

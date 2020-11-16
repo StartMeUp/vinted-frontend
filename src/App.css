@@ -170,3 +170,14 @@ section {
   margin-right: 20px;
   border-radius: 50%;
 }
+#publish h1 {
+  font-size: 1.6em;
+}
+
+#publish form {
+}
+
+#publish .field-container {
+  background-color: white;
+  padding: 20px;
+}

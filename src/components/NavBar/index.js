@@ -36,7 +36,7 @@ const NavBar = ({ token, setUser }) => {
         </>
       )}
 
-      <Link to="/" className="navbutton">
+      <Link to="/publish" className="navbutton">
         Vends tes articles
       </Link>
     </div>
