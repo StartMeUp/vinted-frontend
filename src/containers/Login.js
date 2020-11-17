@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 const Login = ({ setUser }) => {
+  const location = useLocation();
   let history = useHistory();
 
   // States
@@ -36,7 +37,7 @@ const Login = ({ setUser }) => {
       console.log("response.data =>", response.data);
       if (response.data.token) {
         setUser(response.data.token);
-        history.push("/");
+        history.push(location.state.fromPublish ? "/publish" : "/");
       } else {
         alert("Erreur, recommencez");
       }

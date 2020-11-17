@@ -12,7 +12,12 @@ const Payment = ({ token }) => {
 
   return token ? (
     <Elements stripe={stripePromise}>
-      <CheckoutForm product_name={product_name} product_price={product_price} />
+      <CheckoutForm
+        product_name={product_name}
+        product_price={product_price}
+        buyer_protection={0.4}
+        shipping={5}
+      />
     </Elements>
   ) : (
     <Redirect to="/login" />

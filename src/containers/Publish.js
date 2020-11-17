@@ -51,7 +51,11 @@ const Publish = ({ token }) => {
         <h1>Vends ton article</h1>
         <form onSubmit={handleOnSubmit}>
           <div className="field-container image-field">
+            <label className="upload" htmlFor="picture">
+              Choisir un fichier
+            </label>
             <input
+              id="picture"
               type="file"
               onChange={(event) => {
                 // console.log(event.target.files);
@@ -163,13 +167,19 @@ const Publish = ({ token }) => {
               />
             </div>
           </div>
-
-          <button type="submit">Ajouter</button>
+          <div className="submit">
+            <button type="submit">Ajouter</button>
+          </div>
         </form>
       </div>
     </section>
   ) : (
-    <Redirect to="/login" />
+    <Redirect
+      to={{
+        pathname: "/login",
+        state: { fromPublish: true },
+      }}
+    />
   );
 };
 
