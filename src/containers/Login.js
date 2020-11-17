@@ -37,7 +37,6 @@ const Login = ({ setUser }) => {
       console.log("response.data =>", response.data);
       if (response.data.token) {
         setUser(response.data.token);
-        history.push(location.state.fromPublish ? "/publish" : "/");
       } else {
         alert("Erreur, recommencez");
       }
