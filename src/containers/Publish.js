@@ -174,12 +174,7 @@ const Publish = ({ token }) => {
       </div>
     </section>
   ) : (
-    <Redirect
-      to={{
-        pathname: "/login",
-        state: { fromPublish: true },
-      }}
-    />
+    <Redirect to="/login" />
   );
 };
 
