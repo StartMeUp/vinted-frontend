@@ -102,6 +102,10 @@ section {
   border-radius: 3px;
 }
 
+#form form button:hover {
+  cursor: pointer;
+}
+
 #offer {
   background-color: lightgrey;
   height: calc(100vh - 140px);
