@@ -9,6 +9,7 @@ import Login from "./containers/Login";
 import Signup from "./containers/Signup";
 import NavBar from "./components/NavBar";
 import Publish from "./containers/Publish";
+import Payment from "./containers/Payment";
 
 function App() {
   const [token, setToken] = useState(Cookies.get("userToken") || null);
@@ -27,8 +28,11 @@ function App() {
     <Router>
       <NavBar token={token} setUser={setUser} />
       <Switch>
+        <Route path="/payment">
+          <Payment token={token} />
+        </Route>
         <Route path="/publish">
-          <Publish />
+          <Publish token={token} />
         </Route>
         <Route path="/offer/:id">
           <Offer />

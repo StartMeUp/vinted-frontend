@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import DummyAvatar from "../assets/images/dummy-avatar.jpg";
 
 const Offer = () => {
+  let history = useHistory();
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(true);
   const [offer, setOffer] = useState({});
@@ -62,7 +63,16 @@ const Offer = () => {
             />
             {offer.owner.account.username}
           </div>
-          <button>Acheter</button>
+          <button
+            onClick={() => {
+              history.push("/payment", {
+                product_name: offer.product_name,
+                product_price: offer.product_price,
+              });
+            }}
+          >
+            Acheter
+          </button>
         </div>
       </div>
     </section>

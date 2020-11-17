@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import Cookies from "js-cookie";
 import { Redirect, useHistory } from "react-router-dom";
 import axios from "axios";
 
-const Publish = () => {
+const Publish = ({ token }) => {
   let history = useHistory();
-  const token = Cookies.get("userToken");
 
   // states
   const [product_name, setProduct_name] = useState("");
