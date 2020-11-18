@@ -53,7 +53,7 @@ const CheckoutForm = ({
       {!completed ? (
         <section id="payment">
           <div className="container">
-            <h3>Détails de la commande</h3>
+            <h3>Détails de la commande: {product_name}</h3>
             <div className="purchase-details">
               <ul>
                 <li>
